@@ -32,7 +32,7 @@
       {
         "title": "Login user with PASSWORD_AUTH",
         "subtitle": "Login a user using username and password in PASSWORD_AUTH flow",
-        "command": "aws cognito-idp initiate-auth \\n--region {{region}} \\\n--client-id {{client_id}} \\\n--auth-flow USER_PASSWORD_AUTH \\\n--auth-parameters USERNAME='{{username}}',PASSWORD='{{password}}'"
+        "command": "aws cognito-idp initiate-auth \\\n--region {{region}} \\\n--client-id {{client_id}} \\\n--auth-flow USER_PASSWORD_AUTH \\\n--auth-parameters USERNAME='{{username}}',PASSWORD='{{password}}'"
       }
     ]
   },
