@@ -28,6 +28,11 @@
         "title": "Get User",
         "subtitle": "Retrieve user details from the identity pool",
         "command": "aws cognito-idp get-user --access-token '{{access_token}}' \\\n--region {{region}}"
+      },
+      {
+        "title": "Login user with PASSWORD_AUTH",
+        "subtitle": "Login a user using username and password in PASSWORD_AUTH flow",
+        "command": "aws cognito-idp initiate-auth \\n--region {{region}} \\\n--client-id {{client_id}} \\\n--auth-flow USER_PASSWORD_AUTH \\\n--auth-parameters USERNAME='{{username}}',PASSWORD='{{password}}'"
       }
     ]
   },
