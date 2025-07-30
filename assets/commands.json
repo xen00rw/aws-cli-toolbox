@@ -1,0 +1,46 @@
+[
+  {
+    "title": "AWS Cognito",
+    "subtitle": "Manage AWS Cognito Identities",
+    "command": "",
+    "subcommands": [
+      {
+        "title": "Signup User",
+        "subtitle": "Create a new user in the identity pool",
+        "command": "aws cognito-idp sign-up --client-id {{client_id}} \\\n--username '{{username}}' \\\n--password '{{password}}' \\\n--region {{region}}"
+      },
+      {
+        "title": "Signup User with Attributes",
+        "subtitle": "Create a new user with additional attributes",
+        "command": "aws cognito-idp sign-up --client-id {{client_id}} \\\n--username '{{username}}' \\\n--password '{{password}}' \\\n--region {{region}} \\\n--user-attributes Name=email,Value='{{email}}'"
+      },
+      {
+        "title": "Signup User with more Attributes",
+        "subtitle": "Create a new user with more attributes",
+        "command": "aws cognito-idp sign-up --client-id {{client_id}} \\\n--username '{{username}}' \\\n--password '{{password}}' \\\n--region {{region}} \\\n--user-attributes Name=email,Value='{{email}}' \\\nName=name,Value='{{name}}'"
+      },
+      {
+        "title": "Confirm User",
+        "subtitle": "Confirm a user in the identity pool",
+        "command": "aws cognito-idp confirm-sign-up --client-id {{client_id}} \\\n--username '{{username}}' \\\n--confirmation-code '{{confirmation_code}}' \\\n--region {{region}}"
+      },
+      {
+        "title": "Get User",
+        "subtitle": "Retrieve user details from the identity pool",
+        "command": "aws cognito-idp get-user --access-token '{{access_token}}' \\\n--region {{region}}"
+      }
+    ]
+  },
+  {
+    "title": "AWS S3",
+    "subtitle": "AWS S3 Bucket Management",
+    "command": "",
+    "subcommands": [
+      {
+        "title": "List all Buckets",
+        "subtitle": "List all S3 buckets in the specified region. Credentials must be configured",
+        "command": "aws s3 ls s3 \\\n--region {{region}}"
+      }
+    ]
+  }
+]
